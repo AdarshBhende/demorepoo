@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Same Image Detection</title>
+    <title>Image Comparison</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <h2>Upload Images for Comparison</h2>
+
+    <label class="custom-file-label" for="image1">Upload Image 1</label>
+    <input type="file" id="image1" class="file-input" accept="image/*" onchange="previewImage(event, 'preview1')">
+
+    <label class="custom-file-label" for="image2">Upload Image 2</label>
+    <input type="file" id="image2" class="file-input" accept="image/*" onchange="previewImage(event, 'preview2')">
+
     <div class="container">
-        <h2>Same Image Detection</h2>
-        <input type="file" id="image1" accept="image/*">
-        <input type="file" id="image2" accept="image/*">
-        <button onclick="compareImages()">Compare</button>
-        <p id="result"></p>
+        <div class="image-container">
+            <img id="preview1" src="" alt="Image 1 Preview">
+        </div>
+        <div class="image-container">
+            <img id="preview2" src="" alt="Image 2 Preview">
+        </div>
     </div>
 
+    <button id="compareBtn" onclick="compareImages()">Compare Images</button>
+    <div id="result"></div>
+
     <script src="script.js"></script>
+
 </body>
 </html>

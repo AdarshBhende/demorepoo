@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ImagecomApplication<imagecom>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.imagecomparison.imagecom.ImagecomApplication",
+            "projectName": "imagecom",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
